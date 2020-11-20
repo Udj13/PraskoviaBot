@@ -19,8 +19,7 @@ def send_help(message):
 				  '/info - полная информация по приборчику \n' \
 				  'Коротенькие /devinfo, /client, /lastactiv \n' \
 				  '/loc - получить положение \n' \
-				  '/abonentka - параметры через пробел - месяц, год, клиент. Например /abonentka 10 2020 Stroiregion \n' \
-				  'и не вздумай обзываться'
+				  '/abonentka - параметры через пробел - месяц, год, клиент. Например /abonentka 10 2020 Stroiregion \n'
 
 	replay_text = security(user_id, replay_text)
 	bot.send_message(chat_id, replay_text)
@@ -147,4 +146,6 @@ def echo_all(message):
 #	bot.send_message(str(message.chat.id), "just text to chat")
 
 
-bot.polling()
+
+if __name__ == '__main__':
+	bot.polling()
